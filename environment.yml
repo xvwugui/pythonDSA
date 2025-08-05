@@ -1,0 +1,26 @@
+# 环境名称，dsa 是 Data Structures & Algorithms 的缩写
+name: dsa
+
+# 优先从 conda-forge 渠道下载包
+channels:
+  - conda-forge
+  - defaults
+
+# 依赖包清单
+dependencies:
+  # 选择一个现代的Python版本，能很好地支持类型提示
+  - python=3.11
+
+  # --- 核心开发与实验环境 ---
+  - jupyterlab    # 用于交互式学习和可视化
+  - ipykernel     # 确保Jupyter能很好地识别此环境
+  - pytest        # 编写和运行单元测试的黄金标准
+
+  # --- 常用库 ---
+  - numpy         # 高性能数组，很多算法的实现基础
+  - matplotlib    # 基础绘图库，用于可视化
+  - seaborn       # 更美观的统计绘图库
+
+  # --- 专门用于图(Graph)算法的库 (强烈推荐) ---
+  - networkx      # 用于创建、操作和研究复杂的图结构
+  - pip
